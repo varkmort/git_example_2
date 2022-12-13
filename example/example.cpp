@@ -1,7 +1,8 @@
 ﻿#include <iostream>
 
 
-bool leap(int year) {
+bool leap(int year) 
+{
 	return ((!(year % 4) && year % 100) || !(year % 400)) && year % 1000;
 }
 
@@ -12,11 +13,12 @@ int main()
 	cout << "Введите год: ";
 	int year{};
 	cin >> year;
-	if (leap(year)){
-
+	if (leap(year))
+	{
 		cout << year << " - високосный год\n";
 	}
-	else {
+	else
+	{
 		cout << year << " - не високосный год\n";
 	}
 
