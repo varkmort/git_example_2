@@ -1,9 +1,9 @@
 ﻿#include <iostream>
 
+#include "Year.hpp"
+#include "Header.hpp"
 
-bool leap(int year) {
-	return ((!(year % 4) && year % 100) || !(year % 400)) && year % 1000;
-}
+
 
 int main()
 {
@@ -19,6 +19,7 @@ int main()
 	else {
 		cout << year << " - не високосный год\n";
 	}
-
+	workload();
 	return 0;
 }
+
