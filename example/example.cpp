@@ -1,5 +1,10 @@
 ﻿#include <iostream>
 
+
+bool leap(int year) {
+	return ((!(year % 4) && year % 100) || !(year % 400)) && year % 1000;
+}
+
 int main()
 {
 	setlocale(LC_ALL, "Rus");
@@ -7,7 +12,7 @@ int main()
 	cout << "Введите год: ";
 	int year{};
 	cin >> year;
-	if (((!(year%4) && year%100 ) || !(year%400)) && year%1000){
+	if (leap(year)){
 
 		cout << year << " - високосный год\n";
 	}
